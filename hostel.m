@@ -119,4 +119,6 @@ hasil= S/sum(S);
 hasil = hasil.';
 
 readData = [p d c v hasil];
-set(handles.data2_023, 'Data', readData, 'ColumnName', {'Price', 'Distance From City Center', 'Cleanliness', 'Value For Money', 'Score'});
+sorting = sortrows(readData, 5, 'descend');
+
+set(handles.data2_023, 'Data', sorting, 'ColumnName', {'Price', 'Distance From City Center', 'Cleanliness', 'Value For Money', 'Score'});
